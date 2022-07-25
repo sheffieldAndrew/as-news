@@ -2,7 +2,7 @@ import Header from "./components/Header";
 import { useState } from "react";
 import { UserProfile } from "./context/UserProfile";
 import Profile from "./components/Profile";
-import ArticleSort from "./components/ArticleSort";
+import ArticleList from "./components/ArticleList";
 
 function App() {
   const [userProfile, setUserProfile] = useState({
@@ -15,9 +15,11 @@ function App() {
   return (
     <UserProfile.Provider value={{ userProfile, setUserProfile }}>
       <div className="App">
+      <div className="app_header">
         <Header />
         <Profile />
-        <ArticleSort />
+        </div>
+        <ArticleList/>
       </div>
     </UserProfile.Provider>
   );
