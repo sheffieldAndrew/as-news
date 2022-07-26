@@ -1,27 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap");
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Noto+sans", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   justify-content: center;
   text-align: center;
-  background-color: rgb(255, 230, 238);
+  background-color: rgb(221, 201, 180);
+  color: rgb(27, 42, 65);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: "Lora", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: rgb(27, 42, 65);
 }
 
 .profile {
-  border: 3px solid black;
+  border: 2px solid rgb(43, 58, 103);
   position: absolute;
   top: 0px;
   right: 0px;
   background-color: rgb(204, 221, 255);
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .profile_icon_image {
@@ -37,33 +41,75 @@ code {
 }
 
 .articleList_articleCard {
-  color: black;
-  border: 3px solid black;
+  border: 2px solid rgb(43, 58, 103);
   width: 700px;
   margin: auto;
-  border-radius: 20px;
+  border-radius: 10px;
   margin: 10px auto;
   background-color: rgb(204, 221, 255);
 }
 
+.articleList_articleCard_title {
+  margin: 4px;
+}
+.articleList_articleCard_author {
+  margin: 4px;
+}
+.articleList_articleCard_topic {
+  margin: 4px;
+}
+.articleList_articleCard_snippet {
+  margin: 4px;
+}
+.articleList_articleCard_votes {
+  margin: 4px;
+}
+
 .articleList_articleCard_topic_icon {
+  border: 2px solid rgb(43, 58, 103);
   height: 60px;
   width: 60px;
   border-radius: 50%;
+}
+
+.profile_heading {
+  margin: 5px;
+}
+.profile_changeUser {
+  margin: 5px;
+}
+.profile_icon_image {
+  margin: 18px;
 }
 
 .navigation_link {
   padding-right: 40px;
 }
 
+.navigation_navbar{
+  margin: 15px;
+}
+
+.article_page{
+  border: 2px solid rgb(43, 58, 103);
+  background-color: rgb(204, 221, 255);
+  border-radius: 10px;
+}
+
 .articlePage_article_body {
   width: 700px;
-  text-align: center;
+  text-align: justify;
   margin: auto;
 }
 
 .articlePage_topic_icon {
-  height: 100px;
-  width: 100px;
+  border: 2px solid rgb(43, 58, 103);
+  height: 60px;
+  width: 60px;
   border-radius: 50%;
+}
+
+.voteArticle_button {
+  border: 2px solid rgb(43, 58, 103);
+  border-radius: 3px;
 }
