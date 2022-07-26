@@ -1,8 +1,15 @@
-import Header from "./components/Header";
 import { useState } from "react";
 import { UserProfile } from "./context/UserProfile";
+
+import Header from "./components/Header";
 import Profile from "./components/Profile";
-import ArticleList from "./components/ArticleList";
+
+import Navigation from "./components/Navbar";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import ArticleList from "./components/Topics/ArticleList";
+import FootballArticles from "./components/Topics/FootballArticles";
+import CodingArticles from "./components/Topics/CodingArticles";
+import CookingArticles from "./components/Topics/CookingArticles";
 
 function App() {
   const [userProfile, setUserProfile] = useState({
@@ -13,15 +20,23 @@ function App() {
   });
 
   return (
-    <UserProfile.Provider value={{ userProfile, setUserProfile }}>
-      <div className="App">
-      <div className="app_header">
-        <Header />
-        <Profile />
+    <BrowserRouter>
+      <UserProfile.Provider value={{ userProfile, setUserProfile }}>
+        <div className="App">
+          <div className="app_header">
+            <Header />
+            <Profile />
+            <Navigation />
+          </div>
+          <Routes>
+            <Route path="/" element={<ArticleList />} />
+            <Route path="/football" element={<FootballArticles />} />
+            <Route path="/coding" element={<CodingArticles />} />
+            <Route path="/cooking" element={<CookingArticles />} />
+          </Routes>
         </div>
-        <ArticleList/>
-      </div>
-    </UserProfile.Provider>
+      </UserProfile.Provider>
+    </BrowserRouter>
   );
 }
 
