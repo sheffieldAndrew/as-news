@@ -33,7 +33,7 @@ code {
   display: flex;
   flex-wrap: wrap;
   max-width: 700px;
-  margin: auto
+  margin: auto;
 }
 
 .articleList_articleCard {
@@ -43,11 +43,10 @@ code {
   margin: auto;
   border-radius: 20px;
   margin: 10px auto;
-  background-color: rgb(204, 221, 255)
+  background-color: rgb(204, 221, 255);
 }
 
 .articleList_articleCard_topic_icon {
-
   height: 60px;
   width: 60px;
   border-radius: 50%;
@@ -55,4 +54,16 @@ code {
 
 .navigation_link {
   padding-right: 40px;
+}
+
+.articlePage_article_body {
+  width: 700px;
+  text-align: center;
+  margin: auto;
+}
+
+.articlePage_topic_icon {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
 }
