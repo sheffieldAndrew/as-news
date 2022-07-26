@@ -11,7 +11,7 @@ const ArticlePage = () => {
     fetch(`https://as-nc-news.herokuapp.com/api/articles/${article_id}`)
       .then((res) => res.json())
       .then(({ article }) => setNewArticle(article));
-  }, [article_id]);
+  }, [article_id, newArticle.votes]);
 
   return (
     <div className="article_page">
