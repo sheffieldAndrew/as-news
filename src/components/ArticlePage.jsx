@@ -24,7 +24,7 @@ const ArticlePage = () => {
         className="articlePage_topic_icon"
       />
       <h5 className="articlePage_votes">votes: {newArticle.votes}</h5>
-      <VoteArticle newArticle={newArticle}/>
+      <VoteArticle newArticle={newArticle} setNewArticle={setNewArticle} />
       <br />
       <br />
       <p className="articlePage_article_body">{newArticle.body}</p>
