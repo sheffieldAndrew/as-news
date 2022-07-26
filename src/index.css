@@ -37,3 +37,10 @@ code {
   margin: 10px auto;
   background-color: rgb(204, 221, 255)
 }
+
+.articleList_articleCard_topic_icon {
+
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}
