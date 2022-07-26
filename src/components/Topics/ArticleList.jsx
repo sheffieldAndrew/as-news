@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import ArticleCard from "./ArticleCard";
+import ArticleCard from "../ArticleCard";
 
 const ArticleList = () => {
   const [newsArticles, setNewsArticles] = useState([]);
@@ -8,7 +8,7 @@ const ArticleList = () => {
     fetch(`https://as-nc-news.herokuapp.com/api/articles`)
       .then((res) => res.json())
       .then(({ articles }) => setNewsArticles(articles));
-  }, []);
+  }, [ArticleList]);
 
   return (
     <main className="app_articlesList">

@@ -28,6 +28,14 @@ code {
   border-radius: 50%;
 }
 
+.app_articlesList {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 700px;
+  margin: auto
+}
+
 .articleList_articleCard {
   color: black;
   border: 3px solid black;
@@ -43,4 +51,8 @@ code {
   height: 60px;
   width: 60px;
   border-radius: 50%;
+}
+
+.navigation_link {
+  padding-right: 40px;
 }
