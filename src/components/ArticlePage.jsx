@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import images from "../utils/images";
+import VoteArticle from "./Topics/VoteArticle";
 
 const ArticlePage = () => {
   const { article_id } = useParams();
@@ -23,6 +24,7 @@ const ArticlePage = () => {
         className="articlePage_topic_icon"
       />
       <h5 className="articlePage_votes">votes: {newArticle.votes}</h5>
+      <VoteArticle newArticle={newArticle}/>
       <br />
       <br />
       <p className="articlePage_article_body">{newArticle.body}</p>
