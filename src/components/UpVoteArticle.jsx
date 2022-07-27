@@ -1,10 +1,10 @@
 import axios from "axios";
 
-const VoteArticle = ({ newArticle, setNewArticle }) => {
+const UpVoteArticle = ({ newArticle, setNewArticle }) => {
   const itemToSend = { inc_votes: 1 };
 
   function handleClick() {
-    console.log(itemToSend);
+
     axios
       .patch(
         `https://as-nc-news.herokuapp.com/api/articles/${newArticle.article_id}`,
@@ -26,4 +26,4 @@ const VoteArticle = ({ newArticle, setNewArticle }) => {
   );
 };
 
-export default VoteArticle;
+export default UpVoteArticle;

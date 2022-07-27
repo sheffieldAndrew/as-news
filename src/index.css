@@ -100,6 +100,13 @@ code {
   width: 700px;
   text-align: justify;
   margin: auto;
+  margin-top: 30px;
+}
+
+.articlePage_comments {
+  width: 700px;
+  text-align: justify;
+  margin: auto;
 }
 
 .articlePage_topic_icon {

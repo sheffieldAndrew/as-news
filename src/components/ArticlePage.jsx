@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import images from "../utils/images";
-import VoteArticle from "./Topics/VoteArticle";
+import UpVoteArticle from "./UpVoteArticle"
+import Comments from "./Comments";
+import DownVoteArticle from "./DownVoteArticle";
 
 const ArticlePage = () => {
   const { article_id } = useParams();
@@ -24,14 +26,13 @@ const ArticlePage = () => {
         className="articlePage_topic_icon"
       />
       <h5 className="articlePage_votes">votes: {newArticle.votes}</h5>
-      <VoteArticle newArticle={newArticle} setNewArticle={setNewArticle} />
-      <br />
-      <br />
+      <UpVoteArticle newArticle={newArticle} setNewArticle={setNewArticle} />
+      <DownVoteArticle newArticle={newArticle} setNewArticle={setNewArticle} />
+ 
       <p className="articlePage_article_body">{newArticle.body}</p>
-      <br />
-      <br />
-      <br />
-      <h3>Comments</h3>
+ 
+      <Comments newArticle={newArticle} />
+
     </div>
   );
 };
