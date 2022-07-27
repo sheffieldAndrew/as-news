@@ -19,14 +19,16 @@ const UpVoteArticle = ({ newArticle, setNewArticle }) => {
           const newArticle = { ...currArticle };
           newArticle.votes += 1;
           return newArticle;
-        }).catch((err) => setError(true));
+        });
         setHasVoted(true);
-      });
+      })
+      .catch((err) => setError(true));
   }
 
   if (error) {
-    return <p className="vote_error">error</p>;
+    return <p>error - unable to vote at the moment</p>;
   }
+
   if (hasVoted) {
     return <p>Already up voted</p>;
   }
