@@ -4,6 +4,7 @@ import images from "../utils/images";
 import UpVoteArticle from "./UpVoteArticle"
 import Comments from "./Comments";
 import DownVoteArticle from "./DownVoteArticle";
+import AddComment from "./AddComment";
 
 const ArticlePage = () => {
   const { article_id } = useParams();
@@ -33,6 +34,7 @@ const ArticlePage = () => {
       <p className="articlePage_article_body">{newArticle.body}</p>
  
       <Comments newArticle={newArticle} />
+      <AddComment newArticle={newArticle}/>
 
     </div>
   );
