@@ -7,7 +7,7 @@ const Profile = () => {
 
   return (
     <div className="profile">
-      <h4 className="profile_heading">{userProfile.username}</h4>
+      <h4 className="profile_heading">{userProfile.userName}</h4>
       <img
         src={userProfile.avatar_url}
         alt="user avatar"
@@ -15,7 +15,7 @@ const Profile = () => {
         height="150px"
       />
       <br/>
-      <a href="" className="profile_changeUser">Change User</a>
+      <p className="profile_changeuser">Change User</p>
     </div>
   );
 };

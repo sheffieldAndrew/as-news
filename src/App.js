@@ -14,7 +14,7 @@ import ArticlePage from "./components/ArticlePage";
 
 function App() {
   const [userProfile, setUserProfile] = useState({
-    username: "tickle122",
+    userName: "tickle122",
     name: "Tom Tickle",
     avatar_url:
       "vignette.wikia.nocookie.net/mrmen/images/d/d6/Mr-Tickle-9a.png/revision/latest?cb=20180127221953",

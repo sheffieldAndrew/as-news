@@ -124,5 +124,19 @@ code {
 .addComment_commentBody {
   width: 700px;
   height:200px;
-  ;
+  margin-bottom: 20px;
+}
+
+.profile_changeuser {
+  margin: 1px;
+}
+
+.addComment_submit {
+
+  margin-bottom: 200px;
+}
+
+.addComment_tempComment{
+  text-align: left;
+  margin-left:125px
 }
