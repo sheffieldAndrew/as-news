@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
 
-
 const UpVoteArticle = ({ newArticle, setNewArticle }) => {
   const itemToSend = { inc_votes: 1 };
 
@@ -9,7 +8,6 @@ const UpVoteArticle = ({ newArticle, setNewArticle }) => {
   const [error, setError] = useState(false);
 
   function handleClick() {
-
     axios
       .patch(
         `https://as-nc-news.herokuapp.com/api/articles/${newArticle.article_id}`,
@@ -32,10 +30,7 @@ const UpVoteArticle = ({ newArticle, setNewArticle }) => {
   }
 
   if (hasVoted) {
-    return (<p>Already up voted</p>
-
-      );
-
+    return <p>Already up voted</p>;
   }
 
   return (
