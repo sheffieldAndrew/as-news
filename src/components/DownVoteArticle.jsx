@@ -30,9 +30,9 @@ const DownVoteArticle = ({ newArticle, setNewArticle }) => {
     return <p>error - unable to vote at the moment</p>;
   }
   if (hasVoted) {
-    return <p>Already down voted</p>;
+    return (<p>Already down voted</p>
 
-      });
+      );
 
   }
 

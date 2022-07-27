@@ -32,8 +32,10 @@ const UpVoteArticle = ({ newArticle, setNewArticle }) => {
   }
 
   if (hasVoted) {
-    return <p>Already up voted</p>;
-      });
+    return (<p>Already up voted</p>
+
+      );
+
   }
 
   return (
