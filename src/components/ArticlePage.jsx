@@ -28,6 +28,7 @@ const ArticlePage = () => {
       <h5 className="articlePage_votes">votes: {newArticle.votes}</h5>
       <UpVoteArticle newArticle={newArticle} setNewArticle={setNewArticle} />
       <DownVoteArticle newArticle={newArticle} setNewArticle={setNewArticle} />
+
  
       <p className="articlePage_article_body">{newArticle.body}</p>
  

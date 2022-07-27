@@ -1,24 +1,24 @@
 import axios from "axios";
+
 import { useState } from "react";
 
+const Vote = ({ newArticle, setNewArticle }) => {
+  const UpVoteItemToSend = { inc_votes:1 };
+  const downVoteItemToSend = { inc_votes:-1};
 
-const DownVoteArticle = ({ newArticle, setNewArticle }) => {
-  const itemToSend = { inc_votes: -1 };
-  
   const [hasVoted, setHasVoted] = useState(false);
   const [error, setError] = useState(false);
 
-
-  function handleClick() {
+  function handleClick(data) {
     axios
       .patch(
         `https://as-nc-news.herokuapp.com/api/articles/${newArticle.article_id}`,
-        itemToSend
+        data
       )
       .then(() => {
         setNewArticle((currArticle) => {
           const newArticle = { ...currArticle };
-          newArticle.votes -= 1;
+          newArticle.votes -= data.inc_votes;
           return newArticle;
         });
         setHasVoted(true);
@@ -30,19 +30,19 @@ const DownVoteArticle = ({ newArticle, setNewArticle }) => {
     return <p>error - unable to vote at the moment</p>;
   }
   if (hasVoted) {
-    return <p>Already down voted</p>;
-
-      });
-
+    return <p>Already voted</p>;
   }
 
   return (
-    <button onClick={handleClick} className="voteArticle_button">
+    <div>
+    <button onClick={handleClick(downVoteItemToSend)} className="voteArticle_button">
       Down vote this article
     </button>
+    <button onClick={handleClick(UpVoteItemToSend)} className="voteArticle_button">
+      Up vote this article
+    </button>
+    </div>
   );
 };
 
-
-export default DownVoteArticle;
-
+export default Vote;

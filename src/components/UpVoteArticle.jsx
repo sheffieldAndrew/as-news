@@ -1,7 +1,12 @@
 import axios from "axios";
+import { useState } from "react";
+
 
 const UpVoteArticle = ({ newArticle, setNewArticle }) => {
   const itemToSend = { inc_votes: 1 };
+
+  const [hasVoted, setHasVoted] = useState(false);
+  const [error, setError] = useState(false);
 
   function handleClick() {
 
@@ -16,6 +21,18 @@ const UpVoteArticle = ({ newArticle, setNewArticle }) => {
           newArticle.votes += 1;
           return newArticle;
         });
+
+        setHasVoted(true);
+      })
+      .catch((err) => setError(true));
+  }
+
+  if (error) {
+    return <p>error - unable to vote at the moment</p>;
+  }
+
+  if (hasVoted) {
+    return <p>Already up voted</p>;
       });
   }
 
