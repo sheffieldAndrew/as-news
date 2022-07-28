@@ -21,6 +21,7 @@ return (
 
     <div className="articlePage_comments">
     <h3 className="articlePage_comments_header">Comments</h3>
+
     
     {articleComments.map((comment) => {
       return <CommentCard comment={comment} key={comment.comment_id} />;
