@@ -35,7 +35,7 @@ const ArticlePage = () => {
 
  
       <Comments articleComments={articleComments} setArticleComments={setArticleComments} newArticle={newArticle}/>
-      <AddComment articleComments={articleComments} setArticleComments={setArticleComments} newArticle={newArticle}/>
+      <AddComment newArticle={newArticle}/>
 
     </div>
   );

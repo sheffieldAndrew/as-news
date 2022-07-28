@@ -40,6 +40,12 @@ code {
   margin: auto;
 }
 
+.app_articlesList_header {
+margin-bottom: 20px;
+
+
+}
+
 .articleList_articleCard {
   border: 2px solid rgb(43, 58, 103);
   width: 700px;
@@ -137,6 +143,9 @@ code {
 }
 
 .addComment_tempComment{
-  text-align: left;
-  margin-left:125px
+  width: 700px;
+  text-align: justify;
+  margin: auto;
+  margin-top: 30px;
+
 }

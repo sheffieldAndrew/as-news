@@ -6,6 +6,7 @@ const ArticleCard = ({ article }) => {
 
   return (
     <div className="articleList_articleCard">
+      <h4 className="articleList_articleCard_created_at">Date posted: {article.created_at.toString().slice(0,10)}, {article.created_at.toString().slice(11, 19)} </h4> 
       <h3 className="articleList_articleCard_title">{article.title}</h3>
       <h5 className="articleList_articleCard_author">by {article.author}</h5>
       <h5 className="articleList_articleCard_topic">Topic: {article.topic}</h5>
