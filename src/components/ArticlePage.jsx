@@ -4,10 +4,12 @@ import images from "../utils/images";
 import UpVoteArticle from "./UpVoteArticle";
 import Comments from "./Comments";
 import DownVoteArticle from "./DownVoteArticle";
+import AddComment from "./AddComment";
 
 const ArticlePage = () => {
   const { article_id } = useParams();
   const [newArticle, setNewArticle] = useState([]);
+  const [articleComments, setArticleComments] = useState([]);
 
   useEffect(() => {
     fetch(`https://as-nc-news.herokuapp.com/api/articles/${article_id}`)
@@ -31,7 +33,10 @@ const ArticlePage = () => {
 
       <p className="articlePage_article_body">{newArticle.body}</p>
 
-      <Comments newArticle={newArticle} />
+ 
+      <Comments articleComments={articleComments} setArticleComments={setArticleComments} newArticle={newArticle}/>
+      <AddComment articleComments={articleComments} setArticleComments={setArticleComments} newArticle={newArticle}/>
+
     </div>
   );
 };
