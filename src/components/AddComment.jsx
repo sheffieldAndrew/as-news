@@ -2,7 +2,7 @@ import { useState, useContext } from "react";
 import axios from "axios";
 import { UserProfile } from "../context/UserProfile";
 
-const AddComment = ({ newArticle, articleComments, setArticleComments }) => {
+const AddComment = ({ newArticle }) => {
   const [commentAdded, setCommentAdded] = useState(false);
   const { userProfile } = useContext(UserProfile);
   const [newComment, setNewComment] = useState("");
