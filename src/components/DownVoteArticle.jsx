@@ -1,13 +1,11 @@
 import axios from "axios";
 import { useState } from "react";
 
-
 const DownVoteArticle = ({ newArticle, setNewArticle }) => {
   const itemToSend = { inc_votes: -1 };
-  
+
   const [hasVoted, setHasVoted] = useState(false);
   const [error, setError] = useState(false);
-
 
   function handleClick() {
     axios
@@ -30,10 +28,7 @@ const DownVoteArticle = ({ newArticle, setNewArticle }) => {
     return <p>error - unable to vote at the moment</p>;
   }
   if (hasVoted) {
-    return (<p>Already down voted</p>
-
-      );
-
+    return <p>Already down voted</p>;
   }
 
   return (
@@ -43,6 +38,4 @@ const DownVoteArticle = ({ newArticle, setNewArticle }) => {
   );
 };
 
-
 export default DownVoteArticle;
-

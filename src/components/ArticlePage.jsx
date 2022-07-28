@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import images from "../utils/images";
-import UpVoteArticle from "./UpVoteArticle"
+import UpVoteArticle from "./UpVoteArticle";
 import Comments from "./Comments";
 import DownVoteArticle from "./DownVoteArticle";
 import AddComment from "./AddComment";
@@ -31,11 +31,12 @@ const ArticlePage = () => {
       <UpVoteArticle newArticle={newArticle} setNewArticle={setNewArticle} />
       <DownVoteArticle newArticle={newArticle} setNewArticle={setNewArticle} />
 
- 
       <p className="articlePage_article_body">{newArticle.body}</p>
+
  
       <Comments articleComments={articleComments} setArticleComments={setArticleComments} newArticle={newArticle}/>
       <AddComment articleComments={articleComments} setArticleComments={setArticleComments} newArticle={newArticle}/>
+
     </div>
   );
 };

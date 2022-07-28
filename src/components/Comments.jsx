@@ -9,6 +9,7 @@ const Comments = ({ newArticle, articleComments, setArticleComments }) => {
       `https://as-nc-news.herokuapp.com/api/articles/${newArticle.article_id}/comments`
     )
       .then((res) => res.json())
+
       .then(({ comments }) => setArticleComments(comments));
   }, [newArticle.article_id, setArticleComments]);
 
@@ -27,6 +28,7 @@ const Comments = ({ newArticle, articleComments, setArticleComments }) => {
           })}
         </div>
       )}
+
     </div>
   );
 };
