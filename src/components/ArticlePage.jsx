@@ -8,6 +8,7 @@ import AddComment from "./AddComment";
 
 const ArticlePage = () => {
   const { article_id } = useParams();
+  console.log(article_id);
   const [newArticle, setNewArticle] = useState([]);
   const [articleComments, setArticleComments] = useState([]);
 
@@ -35,7 +36,7 @@ const ArticlePage = () => {
 
  
       <Comments articleComments={articleComments} setArticleComments={setArticleComments} newArticle={newArticle}/>
-      <AddComment articleComments={articleComments} setArticleComments={setArticleComments} newArticle={newArticle}/>
+      <AddComment newArticle={newArticle}/>
 
     </div>
   );

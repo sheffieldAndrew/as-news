@@ -15,7 +15,7 @@ const AddComment = ({ newArticle }) => {
     e.preventDefault();
     const newCommentToSend = { ...commentToSend };
     newCommentToSend.body = newComment;
-    newCommentToSend.userName = userProfile.userName;
+    newCommentToSend.userName = userProfile.username;
 
     setCommentToSend(newCommentToSend);
 

@@ -14,7 +14,7 @@ const Comments = ({ newArticle, articleComments, setArticleComments }) => {
   }, [newArticle.article_id, setArticleComments]);
 
   return (
-    <div className="comments_CommentsCard">
+    <div className="comments_CommentsList">
       {articleComments === undefined ? (
         <h3 className="articlePage_comments_noComments">
           Currently no comments for this article. Post comment below
@@ -24,7 +24,7 @@ const Comments = ({ newArticle, articleComments, setArticleComments }) => {
           <h3 className="articlePage_comments_header">Comments</h3>
 
           {articleComments.map((comment) => {
-            return <CommentCard comment={comment} key={comment.comment_id} />;
+            return <CommentCard comment={comment} setArticleComments={setArticleComments} key={comment.comment_id} />;
           })}
         </div>
       )}
