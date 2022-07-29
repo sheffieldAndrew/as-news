@@ -15,7 +15,7 @@ const Profile = () => {
         height="150px"
       />
       <br />
-      <Link to="/changeUser" className="navigation_link">
+      <Link to="/changeUser" className="profile_changeUser_link">
         Change User
       </Link>
     </div>

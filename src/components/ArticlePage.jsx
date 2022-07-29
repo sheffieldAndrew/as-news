@@ -8,7 +8,6 @@ import AddComment from "./AddComment";
 
 const ArticlePage = () => {
   const { article_id } = useParams();
-  console.log(article_id);
   const [newArticle, setNewArticle] = useState([]);
   const [articleComments, setArticleComments] = useState([]);
 
@@ -28,7 +27,7 @@ const ArticlePage = () => {
         alt="topic icon"
         className="articlePage_topic_icon"
       />
-      <h5 className="articlePage_votes">votes: {newArticle.votes}</h5>
+      <h5 className="articlePage_votes">Votes: {newArticle.votes}</h5>
       <UpVoteArticle newArticle={newArticle} setNewArticle={setNewArticle} />
       <DownVoteArticle newArticle={newArticle} setNewArticle={setNewArticle} />
 

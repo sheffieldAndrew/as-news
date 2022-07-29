@@ -1,7 +1,7 @@
 const SortBy = ({ setSort_by, setOrder }) => {
   return (
     <section className="sort_by">
-      <p className="sort_by_label">Sort articles</p>
+      <h4 className="sort_by_label">Sort articles</h4>
       <select
         name="sort_by"
         id=""

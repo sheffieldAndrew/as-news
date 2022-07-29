@@ -33,7 +33,7 @@ const DownVoteArticle = ({ newArticle, setNewArticle }) => {
 
   return (
     <button onClick={handleClick} className="voteArticle_button">
-      Down vote this article
+      Down vote this article 👎
     </button>
   );
 };

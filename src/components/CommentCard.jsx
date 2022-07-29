@@ -11,22 +11,24 @@ const CommentCard = ({ comment, setArticleComments }) => {
     e.preventDefault();
     setCommentToDeleteID(e.target.value);
 
-    
-      axios
-        .delete(
-          `https://as-nc-news.herokuapp.com/api/comments/${commentToDeleteID}`
-        )
-        .then((res) => {
-          console.log("article deleted");
-        });
-    
+    axios
+      .delete(
+        `https://as-nc-news.herokuapp.com/api/comments/${commentToDeleteID}`
+      )
+      .then((res) => {
+        console.log("article deleted");
+      });
   };
 
   return (
     <div className="commentCard">
       <h2 className="commentCard_header">{comment.title}</h2>
-      <p className="commentCard_commentB">{comment.body}</p>
-      <h3 className="commentCard_author">by: {comment.author}</h3>
+      <p className="commentCard_comment">{comment.body}</p>
+      <h5 className="commentCard_author">by: {comment.author}</h5>
+      <h5 className="commentCard_created_at">
+        Comment date: {comment.created_at.toString().slice(0, 10)},{" "}
+        {comment.created_at.toString().slice(11, 19)}
+      </h5>
 
       {userProfile.username === comment.author ? (
         <button

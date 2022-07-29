@@ -4,7 +4,7 @@ import SortByCategory from "../SortByCategory";
 
 const CodingArticles = () => {
   const [codingArticles, setCodingArticles] = useState([]);
-  const [sort_by, setSort_by] = useState('created_at');
+  const [setSort_by] = useState('created_at');
 
   useEffect(() => {
     fetch(`https://as-nc-news.herokuapp.com/api/articles?topic=coding`)

@@ -10,6 +10,7 @@ const ArticleCard = ({ article }) => {
       <h4 className="articleList_articleCard_created_at">Date posted: {article.created_at.toString().slice(0,10)}, {article.created_at.toString().slice(11, 19)} </h4> 
       <h3 className="articleList_articleCard_title">{article.title}</h3>
       <h5 className="articleList_articleCard_author">by {article.author}</h5>
+
       <h5 className="articleList_articleCard_topic">Topic: {article.topic}</h5>
       <img
         src={images[article.topic]}
@@ -22,7 +23,7 @@ const ArticleCard = ({ article }) => {
       </p>
       <Link to={`/articles/${article.article_id}`}>Read more</Link>
 
-      <h5 className="articleList_articleCard_votes">votes: {article.votes}</h5>
+      <h5 className="articleList_articleCard_votes">Votes: {article.votes}</h5>
       <h5 className="articleList_articleCard_comment_count">Comments: {article.comment_count}</h5>
     </div>
   );
