@@ -1,28 +1,34 @@
-const SortBy = () => {
+const SortBy = ({ setSort_by, setOrder }) => {
+  return (
+    <section className="sort_by">
+      <p className="sort_by_label">Sort articles</p>
+      <select
+        name="sort_by"
+        id=""
+        className="sort_by_sort_by"
+        onChange={(e) => {
+          setSort_by(e.target.value);
+        }}
+      >
+        <option value="author">Author</option>
+        <option value="title">Title</option>
+        <option value="votes">Votes</option>
+        <option value="created_at">Date posted</option>
+      </select>
 
+      <select
+        name="order"
+        id=""
+        className="sort_by_order"
+        onChange={(e) => {
+          setOrder(e.target.value);
+        }}
+      >
+        <option value="asc">Ascending</option>
+        <option value="desc">Descending</option>
+      </select>
+    </section>
+  );
+};
 
-
-    return ( 
-
-
-        <section className="sort_by">
-        <p className="sort_by_label">Sort articles</p> 
-        <select name="sort_by" id="" className="sort_by_dropdown"
-        onChange={(e)=> 
-        {console.log(e.target.value)}}>
-            <option value ="?sort_by=author&order=asc">Author</option>
-            <option value ="?sort_by=title&order=asc">Title A-Z</option>
-            <option value ="?sort_by=title&order=desc">Title Z-A</option>
-            <option value ="?sort_by=votes&order=asc">Votes ascending</option>
-            <option value ="?sort_by=votes&order=desc">Votes descending</option>
-            <option value ="?sort_by=created_at&order=asc">Date newest first</option>
-            <option value ="?sort_by=crated_at&order=desc">Date oldest first</option>
-        </select>
-
-        </section>
-
-
-     );
-}
- 
 export default SortBy;
