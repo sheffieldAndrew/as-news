@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import ArticleCard from "../ArticleCard";
-import SortBy from "../SortBy";
 import axios from "axios";
+import SortBy from "../SortBy";
 
 const ArticleList = () => {
   const [newsArticles, setNewsArticles] = useState([]);

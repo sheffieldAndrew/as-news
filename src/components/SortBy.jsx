@@ -24,8 +24,8 @@ const SortBy = ({ setSort_by, setOrder }) => {
           setOrder(e.target.value);
         }}
       >
-        <option value="asc">Ascending</option>
         <option value="desc">Descending</option>
+        <option value="asc">Ascending</option>
       </select>
     </section>
   );

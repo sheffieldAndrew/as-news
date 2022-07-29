@@ -11,13 +11,14 @@ import FootballArticles from "./components/Topics/FootballArticles";
 import CodingArticles from "./components/Topics/CodingArticles";
 import CookingArticles from "./components/Topics/CookingArticles";
 import ArticlePage from "./components/ArticlePage";
+import ChangeUser from "./components/ChangeUser";
 
 function App() {
   const [userProfile, setUserProfile] = useState({
-    userName: "tickle122",
+    username: "tickle122",
     name: "Tom Tickle",
     avatar_url:
-      "vignette.wikia.nocookie.net/mrmen/images/d/d6/Mr-Tickle-9a.png/revision/latest?cb=20180127221953",
+      "https://vignette.wikia.nocookie.net/mrmen/images/d/d6/Mr-Tickle-9a.png/revision/latest?cb=20180127221953",
   });
 
   return (
@@ -35,6 +36,7 @@ function App() {
             <Route path="/coding" element={<CodingArticles />} />
             <Route path="/cooking" element={<CookingArticles />} />
             <Route path="/articles/:article_id" element={<ArticlePage />} />
+            <Route path="/changeUser" element={<ChangeUser />} />
           </Routes>
         </div>
       </UserProfile.Provider>

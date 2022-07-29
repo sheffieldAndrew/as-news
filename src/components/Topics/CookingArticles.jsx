@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import ArticleCard from "../ArticleCard";
-import SortBy from "../SortBy";
+import SortByCategory from "../SortByCategory";
 
 const CookingArticles = () => {
   const [cookingArticles, setCookingArticles] = useState([]);
   const [sort_by, setSort_by] = useState('created_at');
-  const [order, setOrder] = useState('desc');
+
 
   useEffect(() => {
     fetch(`https://as-nc-news.herokuapp.com/api/articles?topic=cooking`)
@@ -16,7 +16,7 @@ const CookingArticles = () => {
   return (
     <main className="app_articlesList">
       <h2 className="app_articlesList_header">Cooking Articles</h2>
-      <SortBy  setSort_by={setSort_by} setOrder={setOrder}/>
+      <SortByCategory  setSort_by={setSort_by} />
       {cookingArticles.map((article) => {
           return <ArticleCard article={article} key={article.article_id} />;
         })}
