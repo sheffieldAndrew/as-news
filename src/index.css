@@ -111,8 +111,9 @@ code {
 
 .articlePage_comments {
   width: 700px;
-  text-align: justify;
   margin: auto;
+  align-items: center;;
+  text-align: justify;
 }
 
 .articlePage_topic_icon {
@@ -169,4 +170,21 @@ code {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.commentCard {
+  border: 2px solid rgb(43, 58, 103);
+  width: 700px;
+  border-radius: 10px;
+  background-color: rgb(221, 201, 180);
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.comments_CommentsList {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 700px;
+  margin: auto;
 }

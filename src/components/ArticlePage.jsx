@@ -8,6 +8,7 @@ import AddComment from "./AddComment";
 
 const ArticlePage = () => {
   const { article_id } = useParams();
+  console.log(article_id);
   const [newArticle, setNewArticle] = useState([]);
   const [articleComments, setArticleComments] = useState([]);
 
