@@ -12,16 +12,16 @@ const UserCard = ({ user, usersList }) => {
   };
 
   return (
-    <div key={user.username} className="articleCard">
+    <div key={user.username} className="userCard">
       <button
         onClick={handleClick}
         className="changeUser_button"
         value={user.username}
       >
-        <h2 className="articleCard_header">{user.username}</h2>
+        <h3 className="userCard_header">{user.username}</h3>
       </button>
-      <img src={user.avatar_url} alt="user avatar" height="150px" />
-      <h4 className="articleCard_name">{user.name}</h4>
+      <img className="userCard_avatar" src={user.avatar_url} alt="user avatar" height="150px" />
+      <h4 className="userCard_name">{user.name}</h4>
     </div>
   );
 };

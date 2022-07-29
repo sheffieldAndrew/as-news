@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import images from "../utils/images";
 
 const ArticleCard = ({ article }) => {
+
   const articleSnippet = article.body.slice(0, article.body.indexOf(".") + 1);
 
   return (
@@ -22,6 +23,7 @@ const ArticleCard = ({ article }) => {
       <Link to={`/articles/${article.article_id}`}>Read more</Link>
 
       <h5 className="articleList_articleCard_votes">votes: {article.votes}</h5>
+      <h5 className="articleList_articleCard_comment_count">Comments: {article.comment_count}</h5>
     </div>
   );
 };

@@ -29,7 +29,7 @@ code {
 }
 
 .profile_icon_image {
-  height:30px;
+  height: 30px;
   width: 30;
   border-radius: 50%;
 }
@@ -43,9 +43,7 @@ code {
 }
 
 .app_articlesList_header {
-margin-bottom: 20px;
-
-
+  margin-bottom: 20px;
 }
 
 .articleList_articleCard {
@@ -94,11 +92,11 @@ margin-bottom: 20px;
   padding-right: 40px;
 }
 
-.navigation_navbar{
+.navigation_navbar {
   margin: 15px;
 }
 
-.article_page{
+.article_page {
   border: 2px solid rgb(43, 58, 103);
   background-color: rgb(204, 221, 255);
   border-radius: 10px;
@@ -131,7 +129,7 @@ margin-bottom: 20px;
 
 .addComment_commentBody {
   width: 700px;
-  height:200px;
+  height: 200px;
   margin-bottom: 20px;
 }
 
@@ -140,14 +138,35 @@ margin-bottom: 20px;
 }
 
 .addComment_submit {
-
   margin-bottom: 200px;
 }
 
-.addComment_tempComment{
+.addComment_tempComment {
   width: 700px;
   text-align: justify;
   margin: auto;
   margin-top: 30px;
+}
 
+.userCard {
+  border: 2px solid rgb(43, 58, 103);
+  width: 200px;
+  border-radius: 10px;
+  background-color: rgb(204, 221, 255);
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+}
+
+.userCard_avatar {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.changeUser_usersList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }

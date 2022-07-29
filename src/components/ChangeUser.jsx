@@ -15,14 +15,17 @@ const ChangeUser = () => {
   }, []);
 
   return (
-    <section className="changeUser_usersList">
-      <h2 className="changeUser_usersList_header"> Choose a user:</h2>
-      <ul>
+  <div className="userlist">
+    <h2 className="changeUser_usersList_header"> Choose a user:</h2>
+    <section >
+     
+      <ul className="changeUser_usersList">
         {usersList.map((user) => {
           return <UserCard user={user} key={user.username} usersList={usersList}/>;
         })}
       </ul>
     </section>
+    </div>
   );
 };
 

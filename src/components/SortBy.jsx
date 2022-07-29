@@ -14,6 +14,7 @@ const SortBy = ({ setSort_by, setOrder }) => {
         <option value="title">Title</option>
         <option value="votes">Votes</option>
         <option value="created_at">Date posted</option>
+        <option value="comment_count">Number of comments</option>
       </select>
 
       <select
