@@ -14,7 +14,6 @@ const Profile = () => {
         className="profile_icon_image"
         height="150px"
       />
-      <br />
       <Link to="/changeUser" className="profile_changeUser_link">
         Change User
       </Link>

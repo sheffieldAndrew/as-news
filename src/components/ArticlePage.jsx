@@ -5,6 +5,7 @@ import UpVoteArticle from "./UpVoteArticle";
 import Comments from "./Comments";
 import DownVoteArticle from "./DownVoteArticle";
 import AddComment from "./AddComment";
+import userImages from "../utils/userImages";
 
 const ArticlePage = () => {
   const { article_id } = useParams();
@@ -20,14 +21,14 @@ const ArticlePage = () => {
   return (
     <div className="article_page">
       <h2>{newArticle.title}</h2>
-      <h5 className="articlePage_author">by {newArticle.author}</h5>
+      <h5 className="articlePage_author"> <img src={userImages[newArticle.author]} alt="user icon" height="15px"/>by {newArticle.author}</h5>
       <h5 className="articlePage_topic">Topic: {newArticle.topic}</h5>
       <img
         src={images[newArticle.topic]}
         alt="topic icon"
         className="articlePage_topic_icon"
       />
-      <h5 className="articlePage_votes">Votes: {newArticle.votes}</h5>
+      <h5 className="articlePage_votes"> 🗳️ Votes: {newArticle.votes}</h5>
       <UpVoteArticle newArticle={newArticle} setNewArticle={setNewArticle} />
       <DownVoteArticle newArticle={newArticle} setNewArticle={setNewArticle} />
 

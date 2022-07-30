@@ -23,6 +23,13 @@ code {
   font-size: 60px;
 }
 .profile {
+  display:grid;
+  grid-template-columns: 90%;
+  justify-content: center;
+  align-items: center;
+  grid-template-rows: 40px 40px 40px;
+  height:120px;                                                                                                                                                                                                                                                                       
+  width: 120px;
   border: 2px solid rgb(43, 58, 103);
   position: absolute;
   top: 10px;
@@ -33,8 +40,14 @@ code {
 
 .profile_icon_image {
   height: 30px;
-  width: 30;
   border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  margin:auto;
+}
+
+.profile_changeUser_link {
+  font-size: small;
 }
 
 .app_articlesList {
@@ -76,15 +89,21 @@ code {
   margin: 4px;
 }
 .articleList_articleCard_votes {
+  margin-top: 10px;
   margin: 4px;
 }
 
 .articleList_articleCard_topic_icon {
   border: px solid rgb(43, 58, 103);
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
   margin: 5px;
+}
+
+.miniUserIcon{
+
+border-radius: 50%;
 }
 
 .profile_heading {
@@ -92,9 +111,6 @@ code {
 }
 .profile_changeUser {
   margin: 5px;
-}
-.profile_icon_image {
-  margin: 18px;
 }
 
 .profile_changeUser_link {
@@ -173,17 +189,29 @@ code {
   border: 2px solid rgb(43, 58, 103);
   width: 200px;
   border-radius: 10px;
-  background-color: rgb(204, 221, 255);
+  background-color: whitesmoke;
   justify-content: center;
   align-items: center;
   margin: 30px;
+  display:grid;
+  grid-template-columns: 90%;
+  grid-template-rows: 75px 80px 40px;
+  margin:20px;
+}
+
+.userCard_name{
+
+  margin-top: 1px;
+  margin-bottom: 1px;
 }
 
 .userCard_avatar {
   height: 50px;
   width: 50px;
   border-radius: 50%;
-  margin: auto;
+margin:auto;
+margin-top: 28px;
+margin-bottom:30px;
 }
 
 .changeUser_usersList {
@@ -195,12 +223,19 @@ code {
 
 .changeUser_usersList_header {
   margin: 15px;
+  margin-top: 40px;
 }
 
-.userCard{
-  margin:20px;
+
+.userCard_header {
+  margin-top:15px;
 }
 
+.changeUser_button {
+  margin-top: 5px;
+  background-color: rgb(204, 221, 255);
+  border-radius: 7px;
+}
 .commentCard {
   border: 2px solid rgb(43, 58, 103);
   width: 700px;
