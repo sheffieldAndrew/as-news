@@ -190,6 +190,15 @@ code {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 10px;
+}
+
+.changeUser_usersList_header {
+  margin: 15px;
+}
+
+.userCard{
+  margin:20px;
 }
 
 .commentCard {
@@ -241,4 +250,9 @@ code {
 
 .articleList_articleCard_comment_count {
   margin: 5px;
+}
+
+.sort_by_category {
+  margin-top: 11px;
+  margin-bottom: 3px;
 }
