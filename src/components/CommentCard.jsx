@@ -18,6 +18,7 @@ const CommentCard = ({ comment, setArticleComments }) => {
       )
       .then((res) => {
         console.log("article deleted");
+        window.location.reload(true);
       });
   };
 
@@ -25,7 +26,15 @@ const CommentCard = ({ comment, setArticleComments }) => {
     <div className="commentCard">
       <h2 className="commentCard_header">{comment.title}</h2>
       <p className="commentCard_comment">{comment.body}</p>
-      <h5 className="commentCard_author"><img className="miniUserIcon" src={userImages[comment.author]} alt="user icon" height="18px"/>  by: {comment.author}</h5>
+      <h5 className="commentCard_author">
+        <img
+          className="miniUserIcon"
+          src={userImages[comment.author]}
+          alt="user icon"
+          height="18px"
+        />{" "}
+        by: {comment.author}
+      </h5>
       <h5 className="commentCard_created_at">
         Comment date: {comment.created_at.toString().slice(0, 10)},{" "}
         {comment.created_at.toString().slice(11, 19)}
